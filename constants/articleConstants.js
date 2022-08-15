@@ -1,0 +1,7 @@
+// Constants used in Actions creators and reducers
+
+export const ARTICLE_LIST_REQUEST = 'PRODUCT_LIST_REQUEST'
+export const ARTICLE_LIST_SUCCESS = 'PRODUCT_LIST_SUCCESS'
+export const ARTICLE_LIST_FAIL = 'PRODUCT_LIST_FAIL'
+
+export const LANGUAGE_UPDATE_REQUEST  = 'LANGUAGE_UPDATE_REQUEST'

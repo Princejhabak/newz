@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Box matches snapshot 1`] = `
+<button
+  className="navbar-search-btn btn btn-outline-warning"
+  data-testid="nav-search-button"
+  disabled={false}
+  type="submit"
+>
+  Search
+</button>
+`;
