@@ -1,3 +1,4 @@
+import React from "react";
 import { Alert } from 'react-bootstrap'
 
 // Custom message component for the app to display and handle server errors

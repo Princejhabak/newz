@@ -1,5 +1,5 @@
+import React from "react";
 import moment from "moment";
-import Link from 'next/link'
 
 // Component to show a single news article with the below details
 const ArticleCard = ({article}) => {

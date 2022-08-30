@@ -1,3 +1,4 @@
+import React from "react";
 import { Spinner } from 'react-bootstrap'
 
 // Loading component for the app - shows at every async task

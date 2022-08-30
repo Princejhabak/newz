@@ -1,7 +1,9 @@
+/* eslint-disable */
+
 import React from 'react';
 import { createRoot } from "react-dom/client";
 import Message from "../components/Message";
-import { fireEvent, render, screen, cleanup } from "@testing-library/react";
+import { render, screen, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import renderer from "react-test-renderer";
 import { act } from 'react-dom/test-utils';

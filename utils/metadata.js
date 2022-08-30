@@ -146,3 +146,38 @@ export const SORT_BY = [
         checked: false
     }
 ]
+
+export const SPORTS_DATA = {
+  pagination: {
+    limit: 25,
+    offset: 0,
+    count: 25,
+    total: 10000
+  },
+  data: [
+    {
+      author: "Edward Sutelan",
+      title: "Yankees Aroldis Chapman sent to the IL with an infection that developed after he got a leg tattoo",
+      description: "It just hasnt been Chapmans year.",
+      url: "https://www.sportingnews.com/us/mlb/news/yankees-aroldis-chapman-il-infection-tattoo/ojuhsqo5w920xsbony0m9eu5",
+      source: "Sporting News",
+      image: "https://library.sportingnews.com/2022-08/Aroldis-Chapman-082722-Getty-FTR.jpg",
+      category: "sports",
+      language: "en",
+      country: "us",
+      published_at: "2022-08-28T03:33:31+00:00"
+    },
+    {
+      author: "",
+      title: "Pagan's brutal recollection of Blues tenure",
+      description: "Denis Pagan says his decision to coach Carlton is the biggest regret of his incredible career",
+      url: "https://www.theage.com.au/sport/afl/pagans-brutal-recollection-of-blues-tenure-20220828-p5bdcy.html?ref=rss&utm_medium=rss&utm_source=rss_sport",
+      source: "The Age",
+      image: "https://static.ffx.io/images/$width_800%2C$height_450/t_crop_fill/q_86%2Cf_jpg/e5b7167b1432f7dfcc48013964f258dee94165fb",
+      category: "sports",
+      language: "en",
+      country: "au",
+      published_at: "2022-08-28T03:32:03+00:00"
+    },
+  ]
+}

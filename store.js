@@ -1,5 +1,4 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import {createWrapper, Context, HYDRATE} from 'next-redux-wrapper';
 import thunk from 'redux-thunk'
 import { 
     articleListReducer,

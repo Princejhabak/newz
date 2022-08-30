@@ -1,10 +1,10 @@
+import axios from 'axios';
 import {
     ARTICLE_LIST_REQUEST,
     ARTICLE_LIST_SUCCESS,
     ARTICLE_LIST_FAIL,
     LANGUAGE_UPDATE_REQUEST
 } from '../constants/articleConstants';
-// const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 // Access env variables stored in .env file 
 const ROOT_URL = process.env.NEXT_PUBLIC_ROOT_URL;
@@ -51,15 +51,22 @@ export const listArticles = (search, categories, countries, sortBy, fromDate, to
         fetchURL = fetchURL + `&offset=${offset}`;
     }
     
-    const res = await fetch(fetchURL);
-    const data = await res.json();
-  
-    // If error
-    if(!res.ok){
+    // const res = await fetch(fetchURL);
+    // const data = await res.json();
+    
+    try{
+        const res = await axios.get(fetchURL);
+        const data = res.data;
+        dispatch({
+            type: ARTICLE_LIST_SUCCESS,
+            payload: data,
+        });
+    }
+    catch(err){
         const error = {
-            status: res.status,
-            statusText: res.statusText,
-            message: data.error.message
+            status: err.response?.status,
+            statusText: err.response?.statusText,
+            message: err.response?.data?.error?.message
         }
         console.log(error);
 
@@ -68,12 +75,26 @@ export const listArticles = (search, categories, countries, sortBy, fromDate, to
             payload: error
         });
     }
-    else{
-        dispatch({
-            type: ARTICLE_LIST_SUCCESS,
-            payload: data,
-        });
-    } 
+    // // If error
+    // if(!res.statusText==='OK'){
+    //     const error = {
+    //         status: res.status,
+    //         statusText: res.statusText,
+    //         message: data.error.message
+    //     }
+    //     console.log(error);
+
+    //     dispatch({
+    //         type: ARTICLE_LIST_FAIL,
+    //         payload: error
+    //     });
+    // }
+    // else{
+    //     dispatch({
+    //         type: ARTICLE_LIST_SUCCESS,
+    //         payload: data,
+    //     });
+    // } 
 
 }
 

@@ -1,3 +1,4 @@
+import React from "react";
 import { Container, Row, Col } from 'react-bootstrap';
 
 // Footer component for the app
